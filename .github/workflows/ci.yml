@@ -75,7 +75,7 @@ jobs:
 
       - name: (Fail-only) Upload the build report
         if: failure()
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: error-report
           path: build-reports.zip
@@ -102,7 +102,7 @@ jobs:
         id: gradle
 
       - name: Upload Sample Artifacts
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         if: always()
         with:
           name: gradle-kotlin-sample
